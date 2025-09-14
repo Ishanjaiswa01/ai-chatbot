@@ -11,9 +11,10 @@ import os
 
 # We will use a library to load the key from a file
 from dotenv import load_dotenv
-load_dotenv() # This loads the variables from .env
+import os
 
-genai.configure(api_key=os.environ.get("GOOGLE_API_KEY")) # Paste your key here
+load_dotenv() # This line reads the .env file
+genai.configure(api_key=os.environ.get("GOOGLE_API_KEY")) # This line uses the key# Paste your key here
 
 app = Flask(__name__)
 CORS(app)
